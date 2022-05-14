@@ -16,7 +16,7 @@ public class Etanois : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        etanoi.fillAmount -= Input.GetAxis("Horizontal") / 1000f;
+        etanoi.fillAmount -= Input.GetAxis("Horizontal") / 6500f;
     }
 
     public void AddFuel ()
