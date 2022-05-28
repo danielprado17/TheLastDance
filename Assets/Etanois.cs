@@ -6,21 +6,17 @@ using UnityEngine.UI;
 public class Etanois : MonoBehaviour
 {
     public Image etanoi;
+    public Movimento movimento;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        etanoi.fillAmount -= Input.GetAxis("Horizontal") / 4500f;
+        etanoi.fillAmount = movimento.tanque / 100;
     }
 
     public void AddFuel ()
     {
-        etanoi.fillAmount += 1f;
+        movimento.tanque = 100;
+       
     }
 }

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Pinga : MonoBehaviour
 {
-    public Etanois etanol;
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))
         {
-            etanol.AddFuel();
+            collision.gameObject.GetComponent<Etanois>().AddFuel();
             Destroy(gameObject);
         }
     }
